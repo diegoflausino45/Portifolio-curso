@@ -1,0 +1,190 @@
+/*Estrutura Básica*/
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.container{
+    width: 85%;
+    margin: auto;
+}
+
+/*Estrutura do cabeçalho*/
+header{
+    background-color: rgb(20, 17, 17);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 2.5em;
+    justify-content: flex-end;
+    padding: 1.2em;
+    font-size: 1.2em;
+    color: white;
+}
+
+nav ul li a:hover{
+    cursor: pointer;
+    color: rgb(187, 187, 187);
+}
+
+/*Estrutura conteudo lateral Apresentação*/
+aside#apresentacao{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(/images/programador.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+aside#apresentacao .conteudo{
+    display: flex;
+    flex-direction: column;
+}
+
+aside#apresentacao .conteudo h1{
+    font-size: 3em;
+    color: white;
+}
+
+aside#apresentacao .conteudo a{
+    text-decoration: none;
+    color: aqua;
+    padding: 1em 0;
+    font-size: 1.3em;
+}
+
+aside#apresentacao .conteudo button{
+    padding: 1.2em 1em;
+    font-weight: bold;
+    border-radius: 0.5em;
+    font-size: 0.8em;
+}
+
+aside#apresentacao .conteudo button:hover{
+    cursor: pointer;
+    animation: scale 0.5s infinite alternate;
+}
+
+@keyframes scale {
+    from{
+        transform: scale(1);
+    }
+
+    to{
+        transform: scale(1.05);
+    }
+    
+}
+
+/*Estrutura da seção Sobre*/
+main{
+    background-color: white;
+}
+
+section#sobre{
+    display: flex;
+    margin-top: 5em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section#sobre .text{
+    max-width: 50%;
+}
+
+section#sobre h2{
+    font-size: 2em;
+}
+
+section#sobre p{
+    padding-top: 1em ;
+}
+
+section#sobre img{
+    max-width: 450px;
+} 
+
+/*Estrutura da seção Projetos*/
+section#projetos{
+    margin: 10em 0 5em 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+section#projetos .titulo{
+    padding-bottom: 2em;
+}
+
+section#projetos .titulo h2{
+    font-size: 1.8em;
+    font-weight: bold;
+    padding: 0.3em;
+}
+
+section#projetos .imagens-projeto{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding-bottom: 1em;
+}
+
+section#projetos .imagens-projeto img{
+    width: 25%;
+    opacity: 0.8;
+}
+
+section#projetos .imagens-projeto img:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+section#projetos button{
+    padding: 0.5em 1em;
+    background-color: rgb(20, 17, 17);
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+section#projetos button:hover{
+
+    animation: scale 0.5s alternate infinite;
+    cursor: pointer;
+}
+
+/*Estrutura do rodape*/
+footer{
+    background-color: rgb(20, 17, 17);
+    color: white;
+    text-align: center;
+    padding: 2.5em;
+    font-size: 1.2em;
+}
+
+footer strong{
+    padding-right: 1em;
+}

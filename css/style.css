@@ -105,13 +105,14 @@ main{
 
 section#sobre{
     display: flex;
-    margin-top: 5em;
+    padding: 5em 0;
     align-items: center;
     justify-content: space-between;
 }
 
 section#sobre .text{
     max-width: 50%;
+    margin-right: 2em;
 }
 
 section#sobre h2{
@@ -128,7 +129,7 @@ section#sobre img{
 
 /*Estrutura da seção Projetos*/
 section#projetos{
-    margin: 10em 0 5em 0;
+    padding: 5em  0;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -180,11 +181,57 @@ section#projetos button:hover{
 footer{
     background-color: rgb(20, 17, 17);
     color: white;
-    text-align: center;
     padding: 2.5em;
     font-size: 1.2em;
+    display: flex;
+    justify-content: center;
 }
 
 footer strong{
     padding-right: 1em;
+}
+
+/*RESPONSIVIDADE*/
+
+@media (max-width: 1050px){
+    /* Sobre */
+    section#sobre img{
+        max-width: 350px;
+    } 
+} 
+@media (max-width: 768px){
+    /*Sobre*/
+    section#sobre{
+        flex-direction: column;
+        gap: 3em;
+    }
+
+    section#sobre .text{
+        max-width: 100%;
+        margin-right: 2em;
+    }
+
+    section#sobre img{
+        max-width: 100%;
+    } 
+
+    /*Projetos*/
+    section#projetos .imagens-projeto{
+        flex-direction: column;
+    }
+    
+    section#projetos .imagens-projeto img{
+        width: 100%;
+    }
+
+    /*Rodape*/
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer strong{
+        padding: 0.5em 0;
+        font-size:2em;
+    }
 }
